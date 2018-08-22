@@ -6,5 +6,5 @@ previous_content=$(cat myip.txt)
 if [ "$content"x != "$previous_content"x ]; then
 echo $content > myip.txt
 rm -f tmp
-echo "$(git add . && git commit -m 'update ip' && git push origin master)"
+git add . && git commit -m 'update ip' && git push origin master
 fi
