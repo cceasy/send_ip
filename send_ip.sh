@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 cd /home/pi/cron/send_ip
-from_name="raspberry pi"
-from="pi@raspberry.com"
+from_name="Liu Jiahao"
+from="notify@liujiahao.cc"
 to_name="cceasy"
 to="cceasy@hotmail.com"
 subject="New Raspberry Pi's IP"
@@ -10,7 +10,6 @@ echo $content > tmp
 content=$(cat tmp)
 previous_content=$(cat myip.txt)
 rm -f tmp
-echo $content
 if [ "$content"x != "$previous_content"x ]; then
 echo "Raspberry Pi's IP:\n$content \n"
 echo $content > myip.txt
