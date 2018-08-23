@@ -12,8 +12,7 @@ previous_content=$(cat myip.txt)
 rm -f tmp
 echo $content
 if [ "$content"x != "$previous_content"x ]; then
-echo $content
-echo ""
+echo "Raspberry Pi's IP:\n$content \n"
 echo $content > myip.txt
 git add . && git commit -m 'update ip' && git push origin master
 echo -e "To: \"${to_name}\" <${to}>\nFrom: \"${from_name}\" <${from}>\nSubject: ${subject}\n\n${content}" | /usr/sbin/sendmail -t
