@@ -4,7 +4,7 @@ from_name="Liu Jiahao"
 from="notify@liujiahao.cc"
 to_name="cceasy"
 to="cceasy@hotmail.com"
-subject="New Raspberry Pi's IP"
+subject="Raspberry Pi's IP"
 content="$(ifconfig | grep netmask | sed 's/^[ \t]*//g' | cut -d ' ' -f2)"
 echo $content > tmp
 content=$(cat tmp)
