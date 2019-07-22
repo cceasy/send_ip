@@ -11,6 +11,7 @@ content=$(cat tmp)
 previous_content=$(cat myip.txt)
 rm -f tmp
 if [ "$content"x != "$previous_content"x ]; then
+git pull
 echo "Raspberry Pi's IP:"
 echo $content
 echo ""
